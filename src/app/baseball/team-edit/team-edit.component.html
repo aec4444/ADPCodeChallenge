@@ -1,0 +1,39 @@
+<app-page-header>
+  Edit Team Information
+</app-page-header>
+
+<form class="form" #editForm="ngForm" id="editForm" (ngSubmit)="submitForm()" [ngClass]="{'ng-submitted': editForm.submitted}">
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <div class="form-group app-form">
+        <label for="teamName">Team Name</label>
+        <input class="form-control" type="text" name="teamName" [(ngModel)]="teamInfo.strTeam" placeholder="Team Name"
+          required>
+        <app-input-error message="Team Name is Required" [form]="editForm" for="teamName" errorType="required"></app-input-error>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <div class="form-group app-form">
+        <label for="manager">Manager</label>
+        <input class="form-control" type="text" name="manager" [(ngModel)]="teamInfo.strManager" placeholder="Manager"
+          required>
+        <app-input-error message="Manager is Required" [form]="editForm" for="manager" errorType="required"></app-input-error>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center" *ngIf="!showAlert">
+    <button type="submit" [disabled]="saveInProgress" class="btn btn-primary">
+      {{ saveInProgress ? 'Working...' : 'Save Changes'}}
+    </button>
+    <button type="button" [disabled]="saveInProgress" class="btn btn-secondary ml-2" (click)="goBack()">
+      Cancel
+    </button>
+  </div>
+</form>
+
+<div class="alert alert-success" role="alert" *ngIf="showAlert">
+  <h4 class="alert-heading">Team Saved</h4>
+  <hr>
+  <p>You will return to the league/team list shortly.</p>
+</div>

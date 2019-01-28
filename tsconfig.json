@@ -17,6 +17,20 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@adp/baseball": [
+        "src/app/baseball"
+      ],
+      "@adp/baseball/*": [
+        "src/app/baseball/*"
+      ],
+      "@adp/uiComponents": [
+        "src/app/adp-ui-components"
+      ],
+      "@adp/baseball/*": [
+        "src/app/adp-ui-components/*"
+      ]
+    }
   }
 }

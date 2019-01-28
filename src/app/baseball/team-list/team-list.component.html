@@ -1,0 +1,10 @@
+<ul class="list-group">
+    <li class="list-group-item" 
+        [ngClass]="{active: isTeamSelected(team)}" 
+        *ngFor="let team of teams$ | async"
+        (click)="teamClick(team)"> 
+        {{ team.strTeam }}
+    </li>
+  </ul>
+  
+  

@@ -1,0 +1,21 @@
+<app-page-header>
+  Baseball Leagues and Teams
+</app-page-header>
+
+<div class="jumbotron">
+  <h1 class="display-4">Baseball Leagues and Teams!</h1>
+  <p class="lead">
+    Please select a league and team below to be able to edit team details.
+  </p>
+</div>
+
+<div class="row">
+  <div class="col-6 col-sm-5 col-md-4 col-lg-3">
+    <h6>Leagues</h6>
+    <app-league-list (leagueClicked)="leagueSelected($event)"></app-league-list>
+  </div>
+  <div class="col-6 col-sm-7 col-md-8 col-lg-9">
+    <h6>Teams</h6>
+    <app-team-list [league]="league" (teamClicked)="teamSelected($event)"></app-team-list>
+  </div>
+</div>

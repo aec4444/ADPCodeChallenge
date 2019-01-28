@@ -1,3 +1,5 @@
+import { BaseballAPIConfiguration } from '@adp/baseball';
+
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
@@ -14,3 +16,9 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+export const BASEBALL_API_CONFIGURATION: BaseballAPIConfiguration = {
+  baseUrl: 'https://www.thesportsdb.com/api/v1/json',
+  apiKey: '1',
+  alertDelay: 0
+};

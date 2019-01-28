@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap';
+
+
+.app-form {
+  margin-bottom: 35px;
+  position: relative;
+}
+.app-form .other-ctrl{
+  width:320px;
+  margin-top: 5px;
+}
+.app-form label {
+  font-size: 16px;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+.app-form label sup {
+  color: #E40514;
+  top: -2px;
+  left: 2px;
+}
+.app-form label span{
+  display: block;
+}
+.app-form .form-control {
+  border: 1px solid #B7B7B7;
+  border-radius: 0;
+  box-shadow: none;
+  height: 46px;
+}
+
+.app-form .error-message {
+  color: #E40514;
+  font-family:Arial, Helvetica, sans-serif;
+  margin-top: 5px;
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  position: absolute;
+
+}
+
+@media (max-width: 767px) {
+  .app-form {
+      margin-bottom: 30px;
+  }
+  .app-form .form-control {
+      height: 40px;
+  }
+}
+
+form.ng-submitted input.ng-invalid, form input.ng-touched.ng-invalid,
+form.ng-submitted select.ng-invalid, form select.ng-touched.ng-invalid,
+form.ng-submitted textarea.ng-invalid, form textarea.ng-touched.ng-invalid {
+  border: 1px solid #E40514 !important;
+}

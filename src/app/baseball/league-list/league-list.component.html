@@ -1,0 +1,9 @@
+<ul class="list-group">
+  <li class="list-group-item" 
+      [ngClass]="{active: isLeagueSelected(league)}" 
+      *ngFor="let league of leagues$ | async"
+      (click)="leagueClick(league)"> 
+      {{ league.strLeague }}
+  </li>
+</ul>
+
